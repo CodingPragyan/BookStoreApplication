@@ -104,7 +104,7 @@ def search_book():
 
 def display():
     x = book_col.estimated_document_count()
-    if x < 1:
+    if x == 0:
         print("NO BOOK ADDED IN THE DATABASE")
     count = book_col.find({})
     print(" ")
