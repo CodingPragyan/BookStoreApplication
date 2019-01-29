@@ -105,14 +105,17 @@ def search_book():
 def display():
     x = book_col.estimated_document_count()
     if x == 0:
+        print(" ")
         print("NO BOOK ADDED IN THE DATABASE")
-    count = book_col.find({})
-    print(" ")
-    print("DISPLAYING ALL BOOKS")
-    print(".......................")
-    for document in count:
-        print(document)
-    print(" ")
+        print(" ")
+    else:
+        count = book_col.find({})
+        print(" ")
+        print("DISPLAYING ALL BOOKS")
+        print(".......................")
+        for document in count:
+            print(document)
+        print(" ")
 
 
 def modify_one(num):
